@@ -1,0 +1,247 @@
+/* цвет основного ТЕКСТА (простой текст) #757575 [ --primary-text-color ] */
+/* вотричний цвет ТЕКСТА (Заголовки)  ##212121 [ --secondary-text-color ] */
+
+/* акцент #2196F3 (Синенький) [ --accent-color ] */
+
+/* главный цвет ФОНА #E5E5E5 (Светлый) [ --primary-bg-color ] */
+/* вторичный цвет ФОНА #F5F4FA (Серый) [ --secondary-bg-color ] */
+/* баннер цвет фона #2F303A (тёмный) [ --banner-bg-color ] */
+
+/* Использовать: color: var(--primary-text-color); */
+
+/* Правила */
+:root {
+  --primary-text-color: #757575;
+  --secondary-text-color: #212121;
+  --accent-color: #2196f3;
+  --primary-bg-color: #e5e5e5;
+  --secondary-bg-color: #f5f4fa;
+  --banner-bg-color: #2f303a;
+}
+
+/* HTML */
+
+.header {
+  background-color: #ffffff;
+}
+.footer {
+  background-color: #2f303a;
+}
+
+/* Скрыть заголовок */
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+/* INDEX */
+/* Body */
+/* Правила для всей страницы */
+body {
+  color: var(--primary-text-color);
+
+  font-family: 'roboto', sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1.71;
+  letter-spacing: 0.03em;
+}
+
+/* убираем подчеркивание у всех ссылoк */
+a {
+  text-decoration: none;
+}
+/* убираем точку и всех списках */
+ul {
+  list-style-type: none;
+}
+/* Главная навигация */
+/* Логотип */
+
+.logo {
+  font-family: 'raleway', sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 26px;
+  line-height: 1.19;
+  letter-spacing: 0.03em;
+
+  color: var(--accent-color);
+}
+
+.accent-logo-top {
+  color: #000000;
+}
+
+/* Навигация по страницам */
+.site-nav .link {
+  color: var(--secondary-text-color);
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 1.14;
+  letter-spacing: 0.02em;
+}
+
+.site-nav .link:hover,
+.site-nav .link:focus {
+  color: var(--accent-color);
+}
+
+.site-nav .link.current {
+  color: var(--accent-color);
+}
+/* Контакты */
+
+.contacts .link {
+  color: var(--primary-text-color);
+}
+
+.site-nav.list:hover,
+.site-nav.list:focus {
+  color: var(--accent-color);
+}
+/* Баннер (Герой) */
+.hero {
+  background-color: var(--banner-bg-color);
+}
+.hero-title {
+  color: #ffffff;
+  font-weight: 900;
+  font-size: 44px;
+  line-height: 1.36;
+  text-align: center;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+.hero-button {
+  color: #ffffff;
+  background-color: var(--accent-color);
+  cursor: pointer;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.87;
+  letter-spacing: 0.06em;
+}
+.hero-button:hover,
+.hero-button:focus {
+  color: var(--accent-color);
+  background-color: #ffffff;
+}
+/* Особенности */
+.title {
+  color: var(--secondary-text-color);
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.14;
+  text-transform: uppercase;
+}
+
+.title-text {
+  color: var(--primary-text-color);
+  font-weight: 400;
+}
+
+/* Чем мы занимаемся */
+.section-title {
+  color: var(--secondary-text-color);
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 1.16;
+  text-align: center;
+}
+
+/* Наша команда */
+.team-list {
+  color: var(--secondary-text-color);
+}
+
+.team-list-name {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.18;
+  text-align: center;
+}
+
+.team-list-job {
+  color: var(--primary-text-color);
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.18;
+  text-align: center;
+}
+.team {
+  background-color: var(--secondary-bg-color);
+}
+
+/* PORTFOLIO */
+
+/* Кнопки фильтров */
+.button {
+  color: #000000;
+  cursor: pointer;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.62;
+  text-align: center;
+  letter-spacing: 0.03em;
+}
+.button:hover,
+.button:focus {
+  color: #ffffff;
+  background-color: var(--accent-color);
+}
+
+/* Плитки с карточками */
+.card-name {
+  color: var(--secondary-text-color);
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 2;
+  letter-spacing: 0.06em;
+}
+
+.card-text {
+  color: var(--primary-text-color);
+  font-size: 16px;
+  line-height: 1.87;
+  letter-spacing: 0.03em;
+}
+
+/* Подвал Footer */
+
+.accent-logo-bot {
+  color: #ffffff;
+}
+
+.address {
+  font-style: normal;
+}
+
+.address-text {
+  color: #ffffff;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1.71;
+  letter-spacing: 0.03em;
+}
+
+.address-nav .link {
+  color: rgba(255, 255, 255, 0.6);
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1.71;
+  letter-spacing: 0.03em;
+}
+
+.address-nav .link:hover,
+.address-nav .link:focus {
+  color: var(--accent-color);
+}
