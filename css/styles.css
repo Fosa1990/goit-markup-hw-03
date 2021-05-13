@@ -14,7 +14,7 @@
   --primary-text-color: #757575;
   --secondary-text-color: #212121;
   --main-accent-color: #2196f3;
-  --secondary-accent-color: #188CE8;
+  --secondary-accent-color: #188ce8;
   --primary-bg-color: #e5e5e5;
   --secondary-bg-color: #f5f4fa;
   --banner-bg-color: #2f303a;
@@ -91,7 +91,7 @@ ul {
   padding-top: 94px;
   padding-bottom: 94px;
   padding-left: 15px;
-  padding-right: 15px; 
+  padding-right: 15px;
   /* outline: 2px solid tomato; */
 }
 
@@ -219,9 +219,10 @@ ul {
   line-height: 1.87;
   letter-spacing: 0.06em;
 }
+
 .hero-button:hover,
 .hero-button:focus {
-  color: #ffffff);
+  color: #ffffff;
   background-color: var(--secondary-accent-color);
 }
 
@@ -278,13 +279,14 @@ ul {
   padding-bottom: 30px;
 
   background: #ffffff;
-
 }
 
-.team-item:hover, .team-item:focus {
+.team-item:hover,
+.team-item:focus {
   /* material shadow v1 */
-  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
-border-radius: 0px 0px 4px 4px;
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
+  border-radius: 0px 0px 4px 4px;
 }
 
 .image-item {
@@ -345,10 +347,11 @@ border-radius: 0px 0px 4px 4px;
 
 .button:hover,
 .button:focus {
-/* shadow-middle */
+  /* shadow-middle */
 
-box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
-border-radius: 4px;
+  box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
+    0px 2px 2px rgba(0, 0, 0, 0.12);
+  border-radius: 4px;
   color: #ffffff;
   background-color: var(--main-accent-color);
 }
@@ -374,8 +377,9 @@ border-radius: 4px;
   height: 404px;
 }
 
-.card:hover, .carf:focus {
-  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25)); 
+.card:hover,
+.carf:focus {
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
 }
 
 .card-image {
