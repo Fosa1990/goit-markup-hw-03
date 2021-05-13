@@ -9,7 +9,7 @@
 
 /* Использовать: color: var(--primary-text-color); */
 
-/* Правила */
+/* ============================== Правила ============================== */
 :root {
   --primary-text-color: #757575;
   --secondary-text-color: #212121;
@@ -19,11 +19,15 @@
   --banner-bg-color: #2f303a;
 }
 
-/* HTML */
+/* ============================== HTML ============================== */
 
 .header {
   background-color: #ffffff;
+  border-bottom: 1px solid #ececec;
+
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
 }
+
 .footer {
   background-color: #2f303a;
 }
@@ -42,9 +46,9 @@
   clip: rect(0 0 0 0);
   overflow: hidden;
 }
-/* INDEX */
-/* Body */
-/* Правила для всей страницы */
+/* ============================== INDEX ============================== */
+/* ============================== Body ============================== */
+/* ====================== Правила для всей страницы ====================== */
 body {
   color: var(--primary-text-color);
 
@@ -55,9 +59,17 @@ body {
   letter-spacing: 0.03em;
 }
 
-/* убираем подчеркивание у всех ссылoк */
+/* Картинки: делаем блоковыми + убирает пространство под картинкой */
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+/* убираем подчеркивание и убираем правый отступ у всех ссылок */
 a {
   text-decoration: none;
+  display: inline-block;
 }
 
 /* убираем точку и всех списках */
@@ -77,6 +89,8 @@ ul {
   margin-bottom: 0;
   padding-top: 94px;
   padding-bottom: 94px;
+  /* padding-left: 15px;
+  padding-right: 15px; */
   outline: 2px solid tomato;
 }
 
@@ -90,7 +104,28 @@ ul {
 .section:nth-of-type(-1n + 3) {
   margin-bottom: 94px;
 }
-/* Главная навигация */
+
+/* ============================== Главная навигация ============================== */
+/* Контейнер главной навигации */
+.main-navigation {
+  display: flex;
+  align-items: center;
+  height: 80px;
+}
+
+.main-nav {
+  display: flex;
+  align-items: center;
+}
+
+.site-nav {
+  display: flex;
+}
+
+.site-nav-item:not(:last-child) {
+  margin-right: 50px;
+}
+
 /* Логотип */
 
 .logo {
@@ -109,6 +144,10 @@ ul {
 
 .accent-logo-top {
   color: #000000;
+}
+
+.nav-logo {
+  margin-right: 93px;
 }
 
 /* Навигация по страницам */
@@ -131,6 +170,10 @@ ul {
 /* Контакты */
 
 .contacts .link {
+  display: block;
+  margin-left: auto;
+
+  height: 16px;
   color: var(--primary-text-color);
 }
 
@@ -138,7 +181,14 @@ ul {
 .site-nav.list:focus {
   color: var(--accent-color);
 }
-/* Баннер (Герой) */
+
+/* Почемуто телефонный номер выпадает, исправил так... о_О */
+.tel {
+  min-width: 122px;
+}
+
+/* ============================== Баннер (Герой) ============================== */
+
 .hero {
   margin-bottom: 94px;
   background-color: var(--banner-bg-color);
@@ -172,7 +222,13 @@ ul {
   color: var(--accent-color);
   background-color: #ffffff;
 }
-/* Особенности */
+
+/* ============================== Особенности ============================== */
+
+.features-list {
+  display: flex;
+}
+
 .title {
   margin-top: 0;
   margin-bottom: 10px;
@@ -192,7 +248,7 @@ ul {
   font-weight: 400;
 }
 
-/* Чем мы занимаемся */
+/* ============================== Чем мы занимаемся ============================== */
 .section-title {
   margin-top: 0;
   margin-bottom: 50px;
@@ -204,9 +260,15 @@ ul {
   text-align: center;
 }
 
-/* Наша команда */
+.section-imgs {
+  display: flex;
+  justify-content: space-between;
+}
+/* ============================== Наша команда ============================== */
 
 .team-list {
+  display: flex;
+  justify-content: space-between;
   color: var(--secondary-text-color);
 }
 
@@ -237,13 +299,19 @@ ul {
   background-color: var(--secondary-bg-color);
 }
 
-/* PORTFOLIO */
+/* ============================== PORTFOLIO ============================== */
 
 /* Список фильтров */
 .filters {
+  display: flex;
+  justify-content: center;
   margin-top: 0;
   margin-bottom: 34px;
   padding-bottom: 16px;
+}
+
+.filter-item:not(:last-child) {
+  margin-right: 8px;
 }
 
 /* Кнопки фильтров */
@@ -270,11 +338,33 @@ ul {
 
 /* Плитки с карточками */
 
+.cards {
+  display: flex;
+  flex-wrap: wrap;
+  /* padding-left: 0;
+  padding-right: 0; */
+}
+
 .card {
+  height: 370px;
+  height: 404px;
+
   padding-bottom: 20px;
   margin-bottom: 30px;
 
   border-bottom: 1px solid #eeeeee;
+
+  /* filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25)); */
+}
+
+/* даем правый отступ всех кроме каждого 3го (3,6,9) */
+.card:not(:nth-child(3n)) {
+  margin-right: 30px;
+}
+
+/* делаем только 3 карточки в ряд */
+.cards > .card {
+  flex-basis: calc((100% - 60px) / 3);
 }
 
 .card-image {
@@ -285,6 +375,7 @@ ul {
 .card-name {
   margin-top: 0;
   margin-bottom: 4px;
+  margin-left: 20px;
 
   color: var(--secondary-text-color);
   font-weight: 700;
@@ -296,6 +387,7 @@ ul {
 .card-text {
   margin-top: 0;
   margin-bottom: 0;
+  margin-left: 20px;
 
   color: var(--primary-text-color);
   font-size: 16px;
@@ -303,7 +395,7 @@ ul {
   letter-spacing: 0.03em;
 }
 
-/* Подвал Footer */
+/* ============================== Подвал Footer ============================== */
 .footer-container {
   padding-top: 60px;
   padding-bottom: 60px;
