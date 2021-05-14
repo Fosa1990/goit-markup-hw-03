@@ -23,10 +23,9 @@
 /* ============================== HTML ============================== */
 
 .header {
-  background-color: #ffffff;
+  padding-top: 24px;
+  padding-bottom: 24px;
   border-bottom: 1px solid #ececec;
-
-  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
 }
 
 .footer {
@@ -101,17 +100,11 @@ ul {
   padding-bottom: 0;
 }
 
-/* Добавляем нижний отступ от предпоследней секции к первой */
-.section:nth-of-type(-1n + 3) {
-  margin-bottom: 94px;
-}
-
 /* ============================== Главная навигация ============================== */
 /* Контейнер главной навигации */
 .main-navigation {
   display: flex;
   align-items: center;
-  height: 80px;
 }
 
 .main-nav {
@@ -121,6 +114,7 @@ ul {
 
 .site-nav {
   display: flex;
+  align-items: center;
 }
 
 .site-nav-item:not(:last-child) {
@@ -152,6 +146,7 @@ ul {
 }
 
 /* Навигация по страницам */
+
 .site-nav .link {
   color: var(--secondary-text-color);
   font-weight: 500;
@@ -168,7 +163,12 @@ ul {
 .site-nav .link.current {
   color: var(--main-accent-color);
 }
+
 /* Контакты */
+
+.contacts {
+  margin-left: auto;
+}
 
 .contacts .link {
   display: block;
@@ -183,15 +183,12 @@ ul {
   color: var(--main-accent-color);
 }
 
-/* Почемуто телефонный номер выпадает, исправил так... о_О */
-.tel {
-  min-width: 122px;
-}
-
 /* ============================== Баннер (Герой) ============================== */
 
 .hero {
-  margin-bottom: 94px;
+  padding-top: 200px;
+  padding-bottom: 200px;
+
   background-color: var(--banner-bg-color);
   text-align: center;
 }
@@ -228,8 +225,20 @@ ul {
 
 /* ============================== Особенности ============================== */
 
+.features {
+  margin-top: 94px;
+}
+
 .features-list {
   display: flex;
+}
+
+.features-item {
+  width: 270px;
+}
+
+.features-item:not(:last-child) {
+  margin-right: 30px;
 }
 
 .title {
@@ -252,6 +261,7 @@ ul {
 }
 
 /* ============================== Чем мы занимаемся ============================== */
+
 .section-title {
   margin-top: 0;
   margin-bottom: 50px;
@@ -263,10 +273,12 @@ ul {
   text-align: center;
 }
 
-.section-imgs {
+.works-list {
   display: flex;
+  justify-content: center;
   justify-content: space-between;
 }
+
 /* ============================== Наша команда ============================== */
 
 .team-list {
@@ -312,6 +324,7 @@ ul {
   line-height: 1.18;
   text-align: center;
 }
+
 .team {
   background-color: var(--secondary-bg-color);
 }
@@ -319,6 +332,7 @@ ul {
 /* ============================== PORTFOLIO ============================== */
 
 /* Список фильтров */
+
 .filters {
   display: flex;
   justify-content: center;
@@ -332,6 +346,7 @@ ul {
 }
 
 /* Кнопки фильтров */
+
 .button {
   height: 38px;
   padding: 6px 22px;
@@ -347,13 +362,13 @@ ul {
 
 .button:hover,
 .button:focus {
-  /* shadow-middle */
+  color: #ffffff;
+  background-color: var(--main-accent-color);
 
+  /* shadow-middle */
   box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
     0px 2px 2px rgba(0, 0, 0, 0.12);
   border-radius: 4px;
-  color: #ffffff;
-  background-color: var(--main-accent-color);
 }
 
 /* Плитки с карточками */
@@ -367,11 +382,9 @@ ul {
 
 .card {
   flex-basis: calc((100% - 90px) / 3);
-  margin-left: 30px;
   margin-top: 30px;
-
+  margin-left: 30px;
   padding-bottom: 20px;
-  margin-bottom: 30px;
 
   max-width: 370px;
   height: 404px;
@@ -385,7 +398,6 @@ ul {
 .card-image {
   padding-top: 0;
   margin-bottom: -10px;
-  /* padding-bottom: 20px; */
 }
 
 .card-blank {
@@ -453,6 +465,9 @@ ul {
 /* Задаем отступ 2м li */
 .address-nav-item {
   margin-top: 0;
+}
+
+.address-nav-item:not(:last-child) {
   margin-bottom: 9px;
 }
 
