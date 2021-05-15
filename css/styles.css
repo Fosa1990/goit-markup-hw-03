@@ -11,13 +11,19 @@
 
 /* ============================== Правила ============================== */
 :root {
+  --header-color: #ececec;
+  --footer-color: #2f303a;
   --primary-text-color: #757575;
   --secondary-text-color: #212121;
+  --third-text-color: #ffffff;
+  --button-white-color: #eeeeee;
+  --card-border-color: #eeeeee;
   --main-accent-color: #2196f3;
   --secondary-accent-color: #188ce8;
   --primary-bg-color: #e5e5e5;
   --secondary-bg-color: #f5f4fa;
   --banner-bg-color: #2f303a;
+  --black-color: #000000;
 }
 
 /* ============================== HTML ============================== */
@@ -25,11 +31,11 @@
 .header {
   padding-top: 24px;
   padding-bottom: 24px;
-  border-bottom: 1px solid #ececec;
+  border-bottom: 1px solid var(--header-color);
 }
 
 .footer {
-  background-color: #2f303a;
+  background-color: var(--footer-color);
 }
 
 /* Скрыть заголовок */
@@ -80,6 +86,12 @@ ul {
   padding: 0;
 }
 
+/* Контейнер секции Section */
+.section {
+  padding-top: 94px;
+  padding-bottom: 94px;
+}
+
 /* Контейнер Div  */
 .container {
   width: 1200px;
@@ -87,10 +99,9 @@ ul {
   margin-right: auto;
   margin-top: 0;
   margin-bottom: 0;
-  padding-top: 94px;
-  padding-bottom: 94px;
   padding-left: 15px;
   padding-right: 15px;
+
   /* outline: 2px solid tomato; */
 }
 
@@ -193,10 +204,11 @@ ul {
   text-align: center;
 }
 .hero-title {
-  margin-top: 0;
-  margin-bottom: 30px;
+  margin: 0 auto;
+  padding-bottom: 30px;
+  max-width: 696px;
 
-  color: #ffffff;
+  color: var(--third-text-color);
   font-weight: 900;
   font-size: 44px;
   line-height: 1.36;
@@ -208,7 +220,7 @@ ul {
   min-width: 200px;
   height: 50px;
 
-  color: #ffffff;
+  color: var(--third-text-color);
   background-color: var(--main-accent-color);
   cursor: pointer;
   font-weight: 700;
@@ -219,14 +231,14 @@ ul {
 
 .hero-button:hover,
 .hero-button:focus {
-  color: #ffffff;
+  color: var(--third-text-color);
   background-color: var(--secondary-accent-color);
 }
 
 /* ============================== Особенности ============================== */
 
 .features {
-  margin-top: 94px;
+  padding-top: 94px;
 }
 
 .features-list {
@@ -288,9 +300,7 @@ ul {
 }
 
 .team-item {
-  padding-bottom: 30px;
-
-  background: #ffffff;
+  background: var(--third-text-color);
 }
 
 .team-item:hover,
@@ -301,8 +311,11 @@ ul {
   border-radius: 0px 0px 4px 4px;
 }
 
-.image-item {
-  margin-bottom: 30px;
+.team-list-title {
+  padding-top: 30px;
+  padding-bottom: 30px;
+  padding-left: 32px;
+  padding-right: 32px;
 }
 
 .team-list-name {
@@ -337,8 +350,7 @@ ul {
   display: flex;
   justify-content: center;
   margin-top: 0;
-  margin-bottom: 34px;
-  padding-bottom: 16px;
+  margin-bottom: 50px;
 }
 
 .filter-item:not(:last-child) {
@@ -348,10 +360,11 @@ ul {
 /* Кнопки фильтров */
 
 .button {
+  border: none;
   height: 38px;
   padding: 6px 22px;
 
-  color: #000000;
+  color: var(--black-color);
   cursor: pointer;
   font-weight: 500;
   font-size: 16px;
@@ -362,7 +375,7 @@ ul {
 
 .button:hover,
 .button:focus {
-  color: #ffffff;
+  color: var(--third-text-color);
   background-color: var(--main-accent-color);
 
   /* shadow-middle */
@@ -384,10 +397,8 @@ ul {
   flex-basis: calc((100% - 90px) / 3);
   margin-top: 30px;
   margin-left: 30px;
-  padding-bottom: 20px;
 
   max-width: 370px;
-  height: 404px;
 }
 
 .card:hover,
@@ -397,34 +408,30 @@ ul {
 
 .card-image {
   padding-top: 0;
-  margin-bottom: -10px;
 }
 
 .card-blank {
-  padding-top: 20px;
-  padding-bottom: 30px;
+  padding: 20px 24px;
 
-  border-bottom: 1px solid #eeeeee;
-  border-left: 1px solid #eeeeee;
-  border-right: 1px solid #eeeeee;
+  border-bottom: 1px solid var(--card-border-color);
+  border-left: 1px solid var(--card-border-color);
+  border-right: 1px solid var(--card-border-color);
 }
 
 .card-name {
   margin-top: 0;
   margin-bottom: 4px;
-  margin-left: 20px;
 
   color: var(--secondary-text-color);
   font-weight: 700;
   font-size: 18px;
   line-height: 2;
-  letter-spacing: 0.06em;
+  letter-spacing: 0.03em;
 }
 
 .card-text {
   margin-top: 0;
   margin-bottom: 0;
-  margin-left: 20px;
 
   color: var(--primary-text-color);
   font-size: 16px;
@@ -433,7 +440,7 @@ ul {
 }
 
 /* ============================== Подвал Footer ============================== */
-.footer-container {
+.footer {
   padding-top: 60px;
   padding-bottom: 60px;
 }
@@ -444,7 +451,7 @@ ul {
 }
 
 .accent-logo-bot {
-  color: #ffffff;
+  color: var(--third-text-color);
 }
 
 .address {
@@ -455,7 +462,7 @@ ul {
   margin-top: 0;
   margin-bottom: 9px;
 
-  color: #ffffff;
+  color: var(--third-text-color);
   font-weight: 400;
   font-size: 14px;
   line-height: 1.71;
