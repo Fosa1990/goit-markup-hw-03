@@ -204,8 +204,7 @@ ul {
   text-align: center;
 }
 .hero-title {
-  margin: 0 auto;
-  padding-bottom: 30px;
+  margin: 0 auto 30px;
   max-width: 696px;
 
   color: var(--third-text-color);
